@@ -1,0 +1,39 @@
+{
+  "name": "ado-sample-generator",
+  "version": "1.0.0",
+  "description": "Azure DevOps sample data generator for migration testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run",
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "generate": "tsx src/cli/index.ts generate --config ./config.example.json",
+    "validate-connection": "tsx src/cli/index.ts validate-connection --config ./config.example.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MayTheSForceBeWithYou/ado-sample-generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/MayTheSForceBeWithYou/ado-sample-generator/issues"
+  },
+  "homepage": "https://github.com/MayTheSForceBeWithYou/ado-sample-generator#readme",
+  "dependencies": {
+    "commander": "^14.0.3",
+    "pino": "^10.3.1",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.4"
+  },
+  "bin": {
+    "ado-sample-generator": "dist/cli/index.js"
+  }
+}
