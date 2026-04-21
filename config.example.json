@@ -1,0 +1,24 @@
+{
+  "organizationUrl": "https://dev.azure.com/my-org",
+  "project": "SampleMigrationProject",
+  "auth": {
+    "type": "pat",
+    "tokenEnvVar": "ADO_PAT"
+  },
+  "dataset": {
+    "epics": 2,
+    "featuresPerEpic": 3,
+    "userStoriesPerFeature": 4,
+    "tasksPerUserStory": 3,
+    "bugs": 10,
+    "issues": 5
+  },
+  "seed": 12345,
+  "options": {
+    "createComments": true,
+    "createAttachments": false,
+    "createRelatedLinks": true,
+    "createTags": true,
+    "dryRun": false
+  }
+}
