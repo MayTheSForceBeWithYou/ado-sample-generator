@@ -22,6 +22,7 @@ export const configSchema = z.object({
     createRelatedLinks: z.boolean(),
     createTags: z.boolean(),
     dryRun: z.boolean(),
+    markerTag: z.string().min(1).default('SeededByMigratorTestApp'),
   }),
 });
 

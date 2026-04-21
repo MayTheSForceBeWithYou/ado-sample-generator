@@ -19,6 +19,7 @@
     "createAttachments": false,
     "createRelatedLinks": true,
     "createTags": true,
-    "dryRun": false
+    "dryRun": false,
+    "markerTag": "SeededByMigratorTestApp"
   }
 }

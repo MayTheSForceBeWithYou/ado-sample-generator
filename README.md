@@ -57,7 +57,8 @@ Use a config file like `config.example.json`:
     "createAttachments": false,
     "createRelatedLinks": true,
     "createTags": true,
-    "dryRun": false
+    "dryRun": false,
+    "markerTag": "SeededByMigratorTestApp"
   }
 }
 ```
@@ -135,5 +136,5 @@ Tests use Vitest with mocked Azure DevOps clients (no live ADO dependency in CI)
 ## Notes / limitations
 
 - Attachments are configurable but not currently uploaded by default flow.
-- Cleanup uses marker tag `SeededByMigratorTestApp`.
+- Cleanup uses the configured `options.markerTag` (default: `SeededByMigratorTestApp`).
 - Hard delete support depends on Azure DevOps permissions and project settings.

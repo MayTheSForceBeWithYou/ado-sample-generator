@@ -19,7 +19,7 @@ const createConfigFile = async (dryRun = true): Promise<string> => {
     auth: { type: 'pat', tokenEnvVar: 'ADO_PAT' },
     dataset: { epics: 1, featuresPerEpic: 1, userStoriesPerFeature: 1, tasksPerUserStory: 1, bugs: 1, issues: 1 },
     seed: 7,
-    options: { createComments: true, createAttachments: false, createRelatedLinks: true, createTags: true, dryRun },
+    options: { createComments: true, createAttachments: false, createRelatedLinks: true, createTags: true, dryRun, markerTag: 'SeededByMigratorTestApp' },
   };
   await writeFile(path, JSON.stringify(config), 'utf-8');
   return path;

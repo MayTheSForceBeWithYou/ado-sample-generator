@@ -21,6 +21,7 @@ const baseConfig: AppConfig = {
     createRelatedLinks: true,
     createTags: true,
     dryRun: false,
+    markerTag: 'SeededByMigratorTestApp',
   },
 };
 

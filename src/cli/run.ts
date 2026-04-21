@@ -34,8 +34,6 @@ const defaultDependencies = (): CliDependencies => ({
   },
 });
 
-const markerTag = 'SeededByMigratorTestApp';
-
 const createSeedReport = (seed: number, dryRun: boolean, startedAtIso: string): SeedReport => ({
   seed,
   dryRun,
@@ -54,7 +52,7 @@ const applyGeneration = async (config: AppConfig, deps: CliDependencies): Promis
 
   await client.validateConnection();
   const availableTypes = await client.getWorkItemTypes();
-  const dataset = generateDataset(config, { availableTypes, markerTag });
+  const dataset = generateDataset(config, { availableTypes, markerTag: config.options.markerTag });
   report.skippedItems = dataset.skippedTypes;
 
   if (config.options.dryRun) {
@@ -153,7 +151,7 @@ export const runCli = async (argv: string[], providedDeps?: Partial<CliDependenc
       const client = deps.createClient(config);
       await client.validateConnection();
 
-      const ids = options.createdBySeeder ? await client.queryWorkItemIdsByTag(markerTag) : [];
+      const ids = options.createdBySeeder ? await client.queryWorkItemIdsByTag(config.options.markerTag) : [];
       deps.stdout(`Found ${ids.length} candidate seeded work items.`);
       if (options.delete) {
         for (const id of ids) {

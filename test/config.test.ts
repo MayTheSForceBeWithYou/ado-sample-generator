@@ -22,6 +22,7 @@ describe('config schema', () => {
         createRelatedLinks: true,
         createTags: true,
         dryRun: false,
+        markerTag: 'SeededByMigratorTestApp',
       },
     });
     expect(parsed.project).toBe('Demo');
@@ -47,6 +48,7 @@ describe('config schema', () => {
         createRelatedLinks: true,
         createTags: true,
         dryRun: false,
+        markerTag: 'SeededByMigratorTestApp',
       },
     })).toThrowError();
   });
