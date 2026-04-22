@@ -3,3 +3,6 @@ dist
 output/*.json
 coverage
 *.log
+.env
+config.source*.json
+scripts/config.source*.json

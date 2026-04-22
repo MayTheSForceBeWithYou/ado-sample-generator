@@ -1,0 +1,25 @@
+{
+  "organizationUrl": "https://dev.azure.com/YOUR_ORG_HERE",
+  "project": "YOUR_SOURCE_PROJECT_HERE",
+  "auth": {
+    "type": "pat",
+    "tokenEnvVar": "ADO_PAT"
+  },
+  "dataset": {
+    "epics": 2,
+    "featuresPerEpic": 2,
+    "userStoriesPerFeature": 3,
+    "tasksPerUserStory": 2,
+    "bugs": 6,
+    "issues": 3
+  },
+  "seed": 12345,
+  "options": {
+    "createComments": true,
+    "createAttachments": false,
+    "createRelatedLinks": true,
+    "createTags": true,
+    "dryRun": true,
+    "markerTag": "SeededByMigratorTestApp"
+  }
+}
